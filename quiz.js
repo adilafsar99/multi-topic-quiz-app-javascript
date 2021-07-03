@@ -11,7 +11,7 @@ var wrongAnswers = 0; // Number of wrong answers
 var remarks; // Comments on user's score
 var webLocation = window.location.toString(); //Current file path
 var pageName = webLocation.slice(webLocation.lastIndexOf("/") + 1); //Current page name
-alert(pageName)
+document.write(pageName)
 // Home Page Scripts
 
 var isEmpty = true;
