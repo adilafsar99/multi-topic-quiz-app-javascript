@@ -46,7 +46,7 @@ if (pageName === "index.html") {
             nameField.setAttribute("placeholder", "");
             nameField.style.backgroundColor = "#ffffff";
             sessionStorage.setItem("userName", nameField.value);
-            window.location = "https://js-assignment-19-21142.netlify.app/questions.html";
+            window.location = "questions.html";
         }
     };
 }
