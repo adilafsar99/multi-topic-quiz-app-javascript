@@ -46,7 +46,7 @@ if (pageName === "index.html") {
             nameField.setAttribute("placeholder", "");
             nameField.style.backgroundColor = "#ffffff";
             sessionStorage.setItem("userName", nameField.value);
-            window.location.href = "https://js-assignment-19-21142.netlify.app/questions.html";
+            window.location = "https://js-assignment-19-21142.netlify.app/questions.html";
         }
     };
 }
@@ -58,7 +58,7 @@ if (pageName === "questions.html") {
     window.onload = function () {
         if (reloadFlag == "true") {
             alert("The quiz was cancelled because you reloaded!");
-            window.location.href = "index.html";
+            window.location = "index.html";
         }
     };
 
