@@ -208,7 +208,7 @@ if (pageName === "questions.html") {
             wrongAnswers += 1;
         }
         if (displayedQuestions.length < 10) {
-            userChoice.style.backgroundColor = "#9a9a9a";
+            userChoice.style.backgroundColor = "inherit";
             nextButton.disabled = true;
             generateQuestion();
             displayQuestion();
