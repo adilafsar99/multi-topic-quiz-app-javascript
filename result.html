@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS Assignment 19 - Quiz App Result Page</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="quiz.css" />
+    </head>
+    <body>
+        <div class="result">
+            <div class="heading-div">
+                <h1>Result</h1>
+            </div>
+            <div class="result-div">
+                <div class="name-div">
+                    <p>Your name:<span id="username"></span></p>
+                </div>
+                <div class="correct-answers-div">
+                    <p>Correct answers:<span id="correct-answers"></span></p>
+                </div>
+                <div class="wrong-answers-div">
+                    <p>Wrong answers:<span id="wrong-answers"></span></p>
+                </div>
+                <div class="numbers-div">
+                    <p>Your score:<span id="numbers"></span>&nbsp;out of 100</p>
+                </div>
+                <div class="remarks-div">
+                    <p id="remarks"></p>
+                </div>
+                <div class="buttons-div">
+                    <button id="try-again-btn" onclick="sessionStorage.setItem('isLoaded', '')"><a href="questions.html">Try again</a></button>
+                    <button id="back-to-home-btn"><a href="index.html">Back to home</a></button>
+                </div>
+            </div>
+        </div>
+        <script src="quiz.js"></script>
+    </body>
+</html>
