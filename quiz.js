@@ -13,7 +13,7 @@ var remarks; // Comments on user's score
 //var pageName = webLocation.slice(webLocation.lastIndexOf("/") + 1); //Current page name
 
 var pageName = window.location.pathname;
-
+document.write(pageName);
 // Home Page Scripts
 
 var isEmpty = true;
