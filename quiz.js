@@ -65,7 +65,7 @@ if (pageName === "/questions.html") {
     window.onload = function () {
         if (reloadFlag == "true") {
             alert("The quiz was cancelled because you reloaded!");
-            window.location = "https:/" + window.location.hostname;
+            window.location = "/";
         }
     };
 
@@ -104,7 +104,7 @@ if (pageName === "/questions.html") {
             sessionStorage.setItem("correctAnswers", correctAnswers);
             sessionStorage.setItem("wrongAnswers", wrongAnswers);
             sessionStorage.setItem("userScore", userScore);
-            window.location = "https:/" + window.location.hostname + "/result.html";
+            window.location = "result.html";
         }
         if (minutes < 10) {
             minutes = "0" + minutes;
@@ -223,7 +223,7 @@ if (pageName === "/questions.html") {
             sessionStorage.setItem("correctAnswers", correctAnswers);
             sessionStorage.setItem("wrongAnswers", wrongAnswers);
             sessionStorage.setItem("userScore", userScore);
-            window.location = "https:/" + window.location.hostname + "/result.html";
+            window.location = "result.html";
         }
     };
 
