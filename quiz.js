@@ -9,8 +9,8 @@ var totalScore = 100; // The total score
 var correctAnswers = 0; // Number of correct answers
 var wrongAnswers = 0; // Number of wrong answers
 var remarks; // Comments on user's score
-var webLocation = window.location.toString(); //Current file path
-var pageName = webLocation.slice(webLocation.lastIndexOf("/") + 1); //Current page name
+var hostName = window.location.hostname.toString(); //Current file path
+var pageName = hostName.slice(hostName.lastIndexOf("/") + 1); //Current page name
 
 
 
@@ -51,7 +51,7 @@ if (pageName === "") {
             nameField.setAttribute("placeholder", "");
             nameField.style.backgroundColor = "#ffffff";
             sessionStorage.setItem("userName", nameField.value);
-            window.location = (hostName + "questions.html");
+            window.location = hostName + "questions.html";
         }
     };
 }
