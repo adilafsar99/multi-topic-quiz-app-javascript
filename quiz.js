@@ -53,14 +53,14 @@ if (pageName === "/") {
             nameField.setAttribute("placeholder", "");
             nameField.style.backgroundColor = "#ffffff";
             sessionStorage.setItem("userName", nameField.value);
-            window.location = hostName + "questions.html";
+            window.location = hostName + "/questions.html";
         }
     };
 }
 
 // Question Page Scripts
 
-if (pageName === "questions.html") {
+if (pageName === "/questions.html") {
     var reloadFlag = sessionStorage.getItem("isLoaded");
     window.onload = function () {
         if (reloadFlag == "true") {
@@ -104,7 +104,7 @@ if (pageName === "questions.html") {
             sessionStorage.setItem("correctAnswers", correctAnswers);
             sessionStorage.setItem("wrongAnswers", wrongAnswers);
             sessionStorage.setItem("userScore", userScore);
-            window.location = hostName + "result.html";
+            window.location = hostName + "/result.html";
         }
         if (minutes < 10) {
             minutes = "0" + minutes;
@@ -223,7 +223,7 @@ if (pageName === "questions.html") {
             sessionStorage.setItem("correctAnswers", correctAnswers);
             sessionStorage.setItem("wrongAnswers", wrongAnswers);
             sessionStorage.setItem("userScore", userScore);
-            window.location = hostName + "result.html";
+            window.location = hostName + "/result.html";
         }
     };
 
@@ -233,7 +233,7 @@ if (pageName === "questions.html") {
 
 // Result Page Scripts
 
-if (pageName === "result.html") {
+if (pageName === "/result.html") {
     function showResult() {
         document.getElementById("username").innerText = " " + sessionStorage.getItem("userName");
         document.getElementById("correct-answers").innerText = " " + sessionStorage.getItem("correctAnswers");
