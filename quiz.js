@@ -9,14 +9,16 @@ var totalScore = 100; // The total score
 var correctAnswers = 0; // Number of correct answers
 var wrongAnswers = 0; // Number of wrong answers
 var remarks; // Comments on user's score
-var webLocation = window.location.toString(); //Current file path
-var pageName = webLocation.slice(webLocation.lastIndexOf("/") + 1); //Current page name
+//var webLocation = window.location.toString(); //Current file path
+//var pageName = webLocation.slice(webLocation.lastIndexOf("/") + 1); //Current page name
+
+var pageName = window.location.pathname;
 
 // Home Page Scripts
 
 var isEmpty = true;
 var isNumber = true;
-if (pageName === "index.html") {
+if (pageName === "/") {
     sessionStorage.setItem("isLoaded", "");
     startButton.onclick = function checkForName() {
         var nameField = document.getElementById("name-field");
