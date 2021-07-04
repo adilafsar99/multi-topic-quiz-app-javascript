@@ -9,7 +9,7 @@ var totalScore = 100; // The total score
 var correctAnswers = 0; // Number of correct answers
 var wrongAnswers = 0; // Number of wrong answers
 var remarks; // Comments on user's score
-var hostName = "https:/" + window.location.hostname; //Current file path
+
 
 var pageName = window.location.pathname; //Current page name
 
@@ -17,8 +17,8 @@ var pageName = window.location.pathname; //Current page name
 
 
 
-document.write(pageName + "<br />");
-document.write(hostName)
+document.write(pageName);
+
 // Home Page Scripts
 
 var isEmpty = true;
@@ -53,7 +53,7 @@ if (pageName === "/") {
             nameField.setAttribute("placeholder", "");
             nameField.style.backgroundColor = "#ffffff";
             sessionStorage.setItem("userName", nameField.value);
-            window.location = hostName + "/questions.html";
+            window.location = "https:/" + window.location.hostname + "/questions.html";
         }
     };
 }
@@ -65,7 +65,7 @@ if (pageName === "/questions.html") {
     window.onload = function () {
         if (reloadFlag == "true") {
             alert("The quiz was cancelled because you reloaded!");
-            window.location = hostName;
+            window.location = "https:/" + window.location.hostname;
         }
     };
 
@@ -104,7 +104,7 @@ if (pageName === "/questions.html") {
             sessionStorage.setItem("correctAnswers", correctAnswers);
             sessionStorage.setItem("wrongAnswers", wrongAnswers);
             sessionStorage.setItem("userScore", userScore);
-            window.location = hostName + "/result.html";
+            window.location = "https:/" + window.location.hostname + "/result.html";
         }
         if (minutes < 10) {
             minutes = "0" + minutes;
@@ -223,7 +223,7 @@ if (pageName === "/questions.html") {
             sessionStorage.setItem("correctAnswers", correctAnswers);
             sessionStorage.setItem("wrongAnswers", wrongAnswers);
             sessionStorage.setItem("userScore", userScore);
-            window.location = hostName + "/result.html";
+            window.location = "https:/" + window.location.hostname + "/result.html";
         }
     };
 
