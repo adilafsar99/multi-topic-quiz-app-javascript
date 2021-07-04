@@ -72,7 +72,7 @@ if (pageName === "/questions.html") {
     window.onload = function () {
         if (reloadFlag == "true") {
             alert("The quiz was cancelled because you reloaded!");
-            window.location = "";
+            window.location = "/";
         }
     };
 
@@ -81,7 +81,7 @@ if (pageName === "/questions.html") {
 
     /* Countdown clock code - Start */
 
-    var remainingTime = 120; //Seconds remaining
+    var remainingTime = 300; //Seconds remaining
     var minutes = Math.floor(remainingTime / 60);
     if (minutes < 10) {
         minutes = "0" + minutes;
