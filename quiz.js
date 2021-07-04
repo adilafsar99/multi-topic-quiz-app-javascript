@@ -17,13 +17,13 @@ var pageName = window.location.pathname; //Current page name
 
 
 
-document.write(pageName);
+document.write(pageName<br>  );
 document.write(hostName)
 // Home Page Scripts
 
 var isEmpty = true;
 var isNumber = true;
-if (pageName === "") {
+if (pageName === "/") {
     sessionStorage.setItem("isLoaded", "");
     startButton.onclick = function checkForName() {
         var nameField = document.getElementById("name-field");
