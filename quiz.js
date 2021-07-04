@@ -17,7 +17,7 @@ var pageName = window.location.pathname; //Current page name
 
 
 
-document.write(pageName<br>  );
+document.write(pageName + "<br />");
 document.write(hostName)
 // Home Page Scripts
 
