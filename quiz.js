@@ -10,7 +10,7 @@ var correctAnswers = 0; // Number of correct answers
 var wrongAnswers = 0; // Number of wrong answers
 var remarks; // Comments on user's score
 var hostName = window.location.hostname; //Current file path
-
+hostName = "https:/" + hostName;
 var pageName = window.location.pathname; //Current page name
 
 
