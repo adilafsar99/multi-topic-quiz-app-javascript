@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS Assignment 19 - Quiz App Home Page</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="quiz.css" />
+    </head>
+    <body>
+        <div class="content">
+            <div class="heading-div">
+                <h1>Welcome To JS Quiz App</h1>
+            </div>
+            <div class="name-field-div">
+                <input id="name-field" type="text" maxlength="20" required="required" placeholder="Enter your name" />
+            </div>
+            <div class="dropdown-div">
+                <select id="quiz-topic-dropdown">
+                    <option class="quiz-types" value="">Choose a topic</option>
+                    <option class="quiz-types">Web Development</option>
+                    <option class="quiz-types">World Affairs</option>
+                    <option class="quiz-types">Sports</option>
+                    <option class="quiz-types">General Knowledge</option>
+                </select>
+            </div>
+            <div class="quiz-info-div">
+                <div class="max-questions-div">
+                    <p id="max-questions">Max Questions: 10</p>
+                </div>
+                <div class="max-marks-div">
+                    <p id="max-marks">Max Marks: 100</p>
+                </div>
+                <div class="max-time-div">
+                    <p id="max-time">Max Time: 2 min</p>
+                </div>
+            </div>
+            <div class="start-button-div">
+                <button id="start-button">Start Quiz</button>
+            </div>
+            <div class="copyright-div">
+                <p id="copyright-text">&copy; Muhammad Adil Afsar</p>
+            </div>
+        </div>
+        <script src="quiz.js"></script>
+    </body>
+</html>

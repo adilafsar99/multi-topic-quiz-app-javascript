@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS Assignment 19 - Quiz App Question Page</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="quiz.css" />
+    </head>
+    <body>
+        <div id="question">
+            <div class="timer-container-div">
+                <div class="countdown-clock-div">
+                    <p class="remaining-time-para" id="minutes"></p>
+                    <p class="remaining-time-para" id="seconds"></p>
+                </div>
+            </div>
+            <div class="heading-div" id="question-heading-div">
+                <h1 id="quiz-topic-heading"></h1>
+                <h2 id="question-heading"></h2>
+            </div>
+            <div class="question-div">
+                <p id="question-text"></p>
+            </div>
+            <div class="choices-div">
+                <div class="choice-div" id="choice-1" onclick="recordChoice(this)">
+                    <p class="choice-text"></p>
+                </div>
+                <div class="choice-div" id="choice-2" onclick="recordChoice(this)">
+                    <p class="choice-text"></p>
+                </div>
+                <div class="choice-div" id="choice-3" onclick="recordChoice(this)">
+                    <p class="choice-text"></p>
+                </div>
+                <div class="choice-div" id="choice-4" onclick="recordChoice(this)">
+                    <p class="choice-text"></p>
+                </div>
+            </div>
+            <div class="next-button-div">
+                <button id="next-button">Next</button>
+            </div>
+        </div>
+        <script src="quiz.js"></script>
+    </body>
+</html>
