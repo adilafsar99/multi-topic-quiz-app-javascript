@@ -51,7 +51,7 @@ if (pageName === "") {
             nameField.setAttribute("placeholder", "");
             nameField.style.backgroundColor = "#ffffff";
             sessionStorage.setItem("userName", nameField.value);
-            window.location = hostName + "questions.html";
+            window.location = (hostName + "questions.html");
         }
     };
 }
