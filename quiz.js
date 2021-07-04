@@ -9,13 +9,13 @@ var totalScore = 100; // The total score
 var correctAnswers = 0; // Number of correct answers
 var wrongAnswers = 0; // Number of wrong answers
 var remarks; // Comments on user's score
-//var webLocation = window.location.toString(); //Current file path
-//var pageName = webLocation.slice(webLocation.lastIndexOf("/") + 1); //Current page name
+var webLocation = window.location.toString(); //Current file path
+var pageName = webLocation.slice(webLocation.lastIndexOf("/") + 1); //Current page name
 
-var hostName = window.location.hostname;
-document.write(hostName);
 
-var pageName = "https://" + hostName + window.location.pathname;
+
+
+
 document.write(pageName);
 // Home Page Scripts
 
@@ -51,19 +51,19 @@ if (pageName === "/") {
             nameField.setAttribute("placeholder", "");
             nameField.style.backgroundColor = "#ffffff";
             sessionStorage.setItem("userName", nameField.value);
-            window.location = "https:/" + hostName + "/questions.html";
+            window.location = hostName + "/questions.html";
         }
     };
 }
 
 // Question Page Scripts
 
-if (pageName === "/questions.html") {
+if (pageName === "questions.html") {
     var reloadFlag = sessionStorage.getItem("isLoaded");
     window.onload = function () {
         if (reloadFlag == "true") {
             alert("The quiz was cancelled because you reloaded!");
-            window.location = "https:/" + hostName + "/";
+            window.location = hostName + "/";
         }
     };
 
@@ -102,7 +102,7 @@ if (pageName === "/questions.html") {
             sessionStorage.setItem("correctAnswers", correctAnswers);
             sessionStorage.setItem("wrongAnswers", wrongAnswers);
             sessionStorage.setItem("userScore", userScore);
-            window.location = "https:/" + hostName + "/result.html";
+            window.location = hostName + "/result.html";
         }
         if (minutes < 10) {
             minutes = "0" + minutes;
@@ -221,7 +221,7 @@ if (pageName === "/questions.html") {
             sessionStorage.setItem("correctAnswers", correctAnswers);
             sessionStorage.setItem("wrongAnswers", wrongAnswers);
             sessionStorage.setItem("userScore", userScore);
-            window.location = "https:/" + hostName + "/result.html";
+            window.location = hostName + "/result.html";
         }
     };
 
@@ -231,7 +231,7 @@ if (pageName === "/questions.html") {
 
 // Result Page Scripts
 
-if (pageName === "/result.html") {
+if (pageName === "result.html") {
     function showResult() {
         document.getElementById("username").innerText = " " + sessionStorage.getItem("userName");
         document.getElementById("correct-answers").innerText = " " + sessionStorage.getItem("correctAnswers");
