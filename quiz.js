@@ -12,7 +12,10 @@ var remarks; // Comments on user's score
 //var webLocation = window.location.toString(); //Current file path
 //var pageName = webLocation.slice(webLocation.lastIndexOf("/") + 1); //Current page name
 
-var pageName = window.location.pathname;
+var hostName = window.location.hostname;
+document.write(hostName);
+
+var pageName = "https://" + hostName + window.location.pathname;
 document.write(pageName);
 // Home Page Scripts
 
@@ -48,7 +51,7 @@ if (pageName === "/") {
             nameField.setAttribute("placeholder", "");
             nameField.style.backgroundColor = "#ffffff";
             sessionStorage.setItem("userName", nameField.value);
-            window.location = "questions.html";
+            window.location = "https:/" + hostName + "/questions.html";
         }
     };
 }
@@ -60,7 +63,7 @@ if (pageName === "/questions.html") {
     window.onload = function () {
         if (reloadFlag == "true") {
             alert("The quiz was cancelled because you reloaded!");
-            window.location = "index.html";
+            window.location = "https:/" + hostName + "/";
         }
     };
 
@@ -99,7 +102,7 @@ if (pageName === "/questions.html") {
             sessionStorage.setItem("correctAnswers", correctAnswers);
             sessionStorage.setItem("wrongAnswers", wrongAnswers);
             sessionStorage.setItem("userScore", userScore);
-            window.location = "result.html";
+            window.location = "https:/" + hostName + "/result.html";
         }
         if (minutes < 10) {
             minutes = "0" + minutes;
@@ -218,7 +221,7 @@ if (pageName === "/questions.html") {
             sessionStorage.setItem("correctAnswers", correctAnswers);
             sessionStorage.setItem("wrongAnswers", wrongAnswers);
             sessionStorage.setItem("userScore", userScore);
-            window.location = "result.html";
+            window.location = "https:/" + hostName + "/result.html";
         }
     };
 
