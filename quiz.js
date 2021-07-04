@@ -21,7 +21,7 @@ document.write(pageName);
 
 var isEmpty = true;
 var isNumber = true;
-if (pageName === "/") {
+if (pageName === "") {
     sessionStorage.setItem("isLoaded", "");
     startButton.onclick = function checkForName() {
         var nameField = document.getElementById("name-field");
