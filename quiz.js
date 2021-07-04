@@ -55,7 +55,7 @@ if (pageName === "/") {
 
 // Question Page Scripts
 
-if (pageName === "questions.html") {
+if (pageName === "/questions.html") {
     var reloadFlag = sessionStorage.getItem("isLoaded");
     window.onload = function () {
         if (reloadFlag == "true") {
@@ -228,7 +228,7 @@ if (pageName === "questions.html") {
 
 // Result Page Scripts
 
-if (pageName === "result.html") {
+if (pageName === "/result.html") {
     function showResult() {
         document.getElementById("username").innerText = " " + sessionStorage.getItem("userName");
         document.getElementById("correct-answers").innerText = " " + sessionStorage.getItem("correctAnswers");
