@@ -14,7 +14,7 @@ var pageName = hostName.slice(hostName.lastIndexOf("/") + 1); //Current page nam
 
 
 
-
+document.write(hostName)
 
 document.write(pageName);
 // Home Page Scripts
