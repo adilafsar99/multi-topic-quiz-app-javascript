@@ -9,7 +9,7 @@ var totalScore = 100; // The total score
 var correctAnswers = 0; // Number of correct answers
 var wrongAnswers = 0; // Number of wrong answers
 var remarks; // Comments on user's score
-var hostName = window.location.hostname.toString(); //Current file path
+var hostName = window.location.toString(); //Current file path
 var pageName = hostName.slice(hostName.lastIndexOf("/") + 1); //Current page name
 
 
