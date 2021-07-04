@@ -15,9 +15,10 @@ var pageName = hostName.slice(hostName.lastIndexOf("/") + 1); //Current page nam
 
 
 
-document.write(hostName)
+
 
 document.write(pageName);
+document.write(hostName)
 // Home Page Scripts
 
 var isEmpty = true;
