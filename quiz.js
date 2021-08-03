@@ -81,7 +81,7 @@ if (pageName === "/questions.html") {
 
     /* Countdown clock code - Start */
 
-    var remainingTime = 300; //Seconds remaining
+    var remainingTime = 120; //Seconds remaining
     var minutes = Math.floor(remainingTime / 60);
     if (minutes < 10) {
         minutes = "0" + minutes;
